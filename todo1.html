@@ -1,0 +1,150 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="jstodo.js"></script>
+<style>
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+}
+body{
+    text-align: center;
+    margin-top: 15%;
+
+}
+
+.taskCompleted{
+text-decoration: line-through;
+color: rgb(230, 230, 230);
+}
+
+.remove{
+    margin-left: 6px;
+    font-weight: 200;
+    color: silver;
+}
+.remove:hover{
+    color: red;
+    cursor: default;
+    
+}
+#todo{
+   text-align: left;
+   margin-left: 1.5%;
+   margin-top: 5%;
+   width: 450px;
+   font-weight: 400;
+   line-height: 1.4;
+}
+
+
+#button, #clear{
+    margin-left: 3px;
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background-color:transparent;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:5px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#666666;
+
+    font-size:15px;
+    padding:6px 14px 8px 18px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+
+
+#button:hover {
+    background-color:transparent;
+}
+
+.check{
+    
+    font-size: 40px;
+    position: relative;
+    top: -2px;
+}
+.check:checked{
+    opacity: 0.5;
+    
+}
+
+.checkboxCompleted{
+    font-size: 40px;
+    top: -2px;
+    position: relative;
+    opacity: 0.5;
+}
+
+#input{
+    width: 200px;
+    height: 32px;
+    font-size: 12pt;
+    padding-left: 1.5%;
+    background: white;
+}
+
+#todoForm{
+    background-color: white;
+    width: 28%;
+    height: 90%;
+    margin: 0 auto;
+    margin-top:-5%;
+
+}
+
+.text{
+    counter-reset: section;          
+    list-style-type: none;
+    
+}
+
+#todo{
+    counter-reset: test;
+}
+
+
+.text::before {
+	counter-increment: test;
+	content: counter(test) ". ";
+
+}
+.text::before {
+	counter-increment: test;
+	content: counter(test) ". ";
+
+}
+
+.taskCompleted::before {    /*для зачеркивания цифры*/
+	counter-increment: test;
+	content: counter(test) ". ";
+}
+
+</style>
+
+</head>
+
+<body>
+ <div id="todoForm">
+    <img src="logo_todo.png">
+    <input id="input">
+    <button type="button" id='button'>Add</button>
+    <button type="button" id='clear'>Clear</button>
+
+            <div id="todo">
+            </div>
+        </div>
+
+
+<script>
+
+ 
+</script>
+
+</body>
+</html>
